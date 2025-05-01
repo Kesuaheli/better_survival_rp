@@ -1,0 +1,45 @@
+name: Upload Server Resource Pack
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        run: |
+          sudo apt install ncftp
+          zip -r better_survival.zip README.md assets/ pack.mcmeta pack.png
+
+      - name: FTP Upload
+        run: |
+          ncftpput -u ${{ secrets.FTP_USER }} -p "${{ secrets.FTP_PASS }}" ${{ secrets.FTP_HOST }} / better_survival.zip
+
+      - name: RCON Message
+        env:
+          # Release version to use from gorcon/rcon-cli
+          rcon-version: 0.10.3
+          commit_message: ${{ toJson(github.event.head_commit.message) }}
+        run: |
+          wget -O rcon-cli.tar.gz https://github.com/gorcon/rcon-cli/releases/download/v${{ env.rcon-version }}/rcon-${{ env.rcon-version }}-amd64_linux.tar.gz
+          tar -zxvf rcon-cli.tar.gz --strip-components=1 rcon-${{ env.rcon-version }}-amd64_linux/rcon
+          chmod +x rcon
+
+          echo "fixing commit message..."
+          echo $commit_message > commit_message.txt
+          echo "Commit message:"
+          cat commit_message.txt
+          cut -c2- commit_message.txt | rev | cut -c2- | rev > commit_message.txt
+          sed -i "s/\\\\/\\\\\\\\/g" commit_message.txt
+          sed -i "s/\"/\\\\\"/g" commit_message.txt
+          echo "Fixed commit message:"
+          cat commit_message.txt
+
+          echo "Sending RCON message..."
+          ./rcon -a ${{ secrets.RCON_HOST }}:${{ secrets.RCON_PORT }} -p "${{ secrets.RCON_PASS }}" "function better_survival:new_pack_upload {actor: \"${{ github.actor }}\", msg: \"$(cat commit_message.txt)\", full_ref: \"${{ github.repository }}/commit/${{ github.sha }}\"}"
