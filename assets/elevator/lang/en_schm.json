@@ -1,0 +1,9 @@
+{
+	"item.kesuaheli.elevator.elevator_cage": "Schmelevator Schmage",
+	"item.kesuaheli.elevator.elevator_core": "Schmelevator Schmore",
+	"item.kesuaheli.elevator.empty_elevator_cage": "Schmempty Schmelevator Schmage",
+
+	"subtitles.kesuaheli.elevator.elevator_use": "Schmayer elevated",
+	"subtitles.kesuaheli.elevator.elevator_place": "Schmelevator placed",
+	"subtitles.kesuaheli.elevator.elevator_remove": "Schmelevator removed"
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "elevator:item/empty_elevator_cage"
+	}
+}

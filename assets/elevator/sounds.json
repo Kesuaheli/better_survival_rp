@@ -1,0 +1,30 @@
+{
+	"elevator_use": {
+		"replace": true,
+		"subtitle": "subtitles.kesuaheli.elevator.elevator_use",
+		"sounds": [
+			"mob/endermen/portal",
+			"mob/endermen/portal2"
+		]
+	},
+	"elevator_place": {
+		"replace": true,
+		"subtitle": "subtitles.kesuaheli.elevator.elevator_place",
+		"sounds": [
+			"entity/shulker/shoot1",
+			"entity/shulker/shoot2",
+			"entity/shulker/shoot3",
+			"entity/shulker/shoot4"
+		]
+	},
+	"elevator_remove": {
+		"replace": true,
+		"subtitle": "subtitles.kesuaheli.elevator.elevator_remove",
+		"sounds": [
+			"entity/shulker/shoot1",
+			"entity/shulker/shoot2",
+			"entity/shulker/shoot3",
+			"entity/shulker/shoot4"
+		]
+	}
+}

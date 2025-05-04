@@ -1,0 +1,9 @@
+{
+	"item.kesuaheli.elevator.elevator_cage": "Tjelevator Tjage",
+	"item.kesuaheli.elevator.elevator_core": "Tjelevator Tjore",
+	"item.kesuaheli.elevator.empty_elevator_cage": "Tjempty Tjelevator Tjage",
+
+	"subtitles.kesuaheli.elevator.elevator_use": "Tjayer elevated",
+	"subtitles.kesuaheli.elevator.elevator_place": "Tjelevator placed",
+	"subtitles.kesuaheli.elevator.elevator_remove": "Tjelevator removed"
+}

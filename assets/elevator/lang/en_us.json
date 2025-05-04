@@ -1,0 +1,9 @@
+{
+	"item.kesuaheli.elevator.elevator_cage": "Elevator Cage",
+	"item.kesuaheli.elevator.elevator_core": "Elevator Core",
+	"item.kesuaheli.elevator.empty_elevator_cage": "Empty Elevator Cage",
+
+	"subtitles.kesuaheli.elevator.elevator_use": "Player elevated",
+	"subtitles.kesuaheli.elevator.elevator_place": "Elevator placed",
+	"subtitles.kesuaheli.elevator.elevator_remove": "Elevator removed"
+}
