@@ -35,11 +35,11 @@ jobs:
           echo $commit_message > commit_message.txt
           echo "Commit message:"
           cat commit_message.txt
-          cut -c2- commit_message.txt | rev | cut -c2- | rev > commit_message.txt
-          sed -i "s/\\\\/\\\\\\\\/g" commit_message.txt
-          sed -i "s/\"/\\\\\"/g" commit_message.txt
+          cut -c2- commit_message.txt | rev | cut -c2- | rev > fixed_commit_message.txt
+          sed -i "s/\\\\/\\\\\\\\/g" fixed_commit_message.txt
+          sed -i "s/\"/\\\\\"/g" fixed_commit_message.txt
           echo "Fixed commit message:"
-          cat commit_message.txt
+          cat fixed_commit_message.txt
 
           echo "Sending RCON message..."
-          ./rcon -a ${{ secrets.RCON_HOST }}:${{ secrets.RCON_PORT }} -p "${{ secrets.RCON_PASS }}" "function better_survival:new_pack_upload {actor: \"${{ github.actor }}\", msg: \"$(cat commit_message.txt)\", full_ref: \"${{ github.repository }}/commit/${{ github.sha }}\"}"
+          ./rcon -a ${{ secrets.RCON_HOST }}:${{ secrets.RCON_PORT }} -p "${{ secrets.RCON_PASS }}" "function better_survival:new_pack_upload {actor: \"${{ github.actor }}\", msg: \"$(cat fixed_commit_message.txt)\", full_ref: \"${{ github.repository }}/commit/${{ github.sha }}\"}"
