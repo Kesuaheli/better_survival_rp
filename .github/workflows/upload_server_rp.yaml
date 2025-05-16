@@ -12,9 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: './scripts/carddeck/go.mod'
+
       - name: Setup
         run: |
           sudo apt install ncftp
+
+      - name: Build Pack
+        run: |
+          go run -C scripts/carddeck/ .
           zip -r better_survival.zip README.md assets/ pack.mcmeta pack.png
 
       - name: FTP Upload
