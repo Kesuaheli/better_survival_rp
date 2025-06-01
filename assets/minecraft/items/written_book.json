@@ -1,0 +1,19 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:component",
+    "predicate": "minecraft:written_book_content",
+    "value": {
+      "title": "bored.key",
+      "author": "Kesuaheli"
+    },
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "better_survival:item/bored.key"
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/written_book"
+    }
+  }
+}
