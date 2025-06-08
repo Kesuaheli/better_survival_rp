@@ -1,0 +1,125 @@
+{
+	"model": {
+		"type": "minecraft:select",
+		"property": "minecraft:component",
+		"component": "minecraft:custom_name",
+		"cases": [
+			{
+				"when": "todo",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Todo",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "ToDo",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Aufgaben",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "aufgaben",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Checkliste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "todo liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Todo liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "ToDo liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Aufgaben liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "aufgaben liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "todo Liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Todo Liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "ToDo Liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "Aufgaben Liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			},
+			{
+				"when": "aufgaben Liste",
+				"model": {
+					"type": "minecraft:model",
+					"model": "better_survival:item/todo_list"
+				}
+			}
+		],
+		"fallback": {
+			"type": "minecraft:model",
+			"model": "minecraft:item/writable_book"
+		}
+	}
+}
