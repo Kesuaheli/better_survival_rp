@@ -1,0 +1,8 @@
+{
+	"item.minecraft.netherite_upgrade_smithing_template.new": "Aufwertung",
+	"item.minecraft.smithing_template.netherite_upgrade.additions_slot_description": "Diamant oder Netheritbarren hinzufügen",
+	"item.minecraft.smithing_template.netherite_upgrade.applies_to": "Eisenausrüstung und Diamantausrüstung",
+	"item.minecraft.smithing_template.netherite_upgrade.base_slot_description": "Rüstungsteil, Werkzeug oder Schwert aus Eisen oder Diamant hinzufügen",
+	"item.minecraft.smithing_template.netherite_upgrade.ingredients": "Diamant oder Netheritbarren",
+	"upgrade.minecraft.netherite_upgrade": "Aufwertung"
+}
